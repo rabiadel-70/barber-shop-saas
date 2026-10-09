@@ -1,121 +1,88 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
+
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
+    <div className="app">
+      <header className="navbar">
+        <a className="logo" href="/">
+          <span className="logo-icon">B</span>
+          BarberBook
+        </a>
+
+        <nav className="nav-links">
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <button className="login-button" type="button">
+          Log in
         </button>
-      </section>
+      </header>
 
-      <div className="ticks"></div>
+      <main>
+        <section className="hero">
+          <p className="eyebrow">YOUR STYLE, YOUR SCHEDULE</p>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+          <h1>
+            A better way to
+            <br />
+            book your next cut.
+          </h1>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+          <p className="hero-description">
+            Find your time. Choose your barber. Book your next appointment
+            with ease.
+          </p>
+
+          <a className="primary-button" href="#services">
+            Explore services
+          </a>
+        </section>
+
+        <section className="services" id="services">
+          <p className="eyebrow">WHAT WE OFFER</p>
+          <h2>Services designed around you</h2>
+
+          <div className="service-grid">
+            <article className="service-card">
+              <span className="service-icon">✂</span>
+              <h3>Classic Haircut</h3>
+              <p>A clean, timeless cut tailored to your style.</p>
+              <span className="service-detail">30 minutes · From £15</span>
+            </article>
+
+            <article className="service-card">
+              <span className="service-icon">▤</span>
+              <h3>Beard Trim</h3>
+              <p>Keep your beard sharp, neat and well-shaped.</p>
+              <span className="service-detail">20 minutes · From £10</span>
+            </article>
+
+            <article className="service-card">
+              <span className="service-icon">✦</span>
+              <h3>Haircut & Beard</h3>
+              <p>A complete grooming session in one appointment.</p>
+              <span className="service-detail">45 minutes · From £25</span>
+            </article>
+          </div>
+        </section>
+
+        <section className="about" id="about">
+          <h2>Good grooming starts with a good booking.</h2>
+          <p>
+            We're building a simpler way to discover services and organise
+            your next barber appointment.
+          </p>
+        </section>
+      </main>
+
+      <footer id="contact">
+        <span>BarberBook</span>
+        <span>Appointment booking made simpler.</span>
+      </footer>
+    </div>
   )
 }
 
