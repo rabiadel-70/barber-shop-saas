@@ -513,3 +513,45 @@ footer {
     width: 100%;
   }
 }
+
+/* Make selected booking options obvious */
+.date-option--selected,
+.time-option--selected {
+  background: #25231f;
+  border: 2px solid #25231f;
+  color: #ffffff;
+  box-shadow: 0 0 0 2px rgba(37, 35, 31, 0.12);
+}
+
+.date-option--selected span,
+.date-option--selected strong {
+  color: #ffffff;
+}
+
+.date-option:hover,
+.time-option:hover {
+  border-color: #25231f;
+}
+
+.date-option:focus-visible,
+.time-option:focus-visible {
+  outline: 3px solid #84967c;
+  outline-offset: 3px;
+}
+
+/* Clear visual feedback for the selected barber */
+.option-card--selected {
+  background: #25231f;
+  border: 2px solid #25231f;
+  color: #ffffff;
+  box-shadow: 0 0 0 2px rgba(37, 35, 31, 0.12);
+}
+
+.option-card--selected > span:not(.barber-avatar) {
+  color: #e6e3dc;
+}
+
+.option-card--selected .barber-avatar {
+  background: #ffffff;
+  color: #25231f;
+}
