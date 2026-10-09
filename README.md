@@ -1,75 +1,58 @@
-# React + TypeScript + Vite
+# Barber Shop SaaS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An independent software engineering project to develop a web-based barber shop booking and appointment management platform.
 
-Currently, two official plugins are available:
+## Objectives
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Design a clear, accessible user interface.
+- Plan customer appointment booking and management.
+- Implement authentication and role-based access control.
+- Design a relational database.
+- Apply modular design, testing and version control.
 
-## React Compiler
+## Technology Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- TypeScript
+- Vite
+- ESLint
+- Git and GitHub
+- Supabase (planned)
 
-## Expanding the ESLint configuration
+## Current Status
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+The project is in its initial setup and planning stage. The React and TypeScript starter application has been created. Booking functionality, authentication and database integration are planned but not yet implemented.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Documentation
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Project documentation is stored in `docs/`:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- `architecture.md` — system architecture.
+- `database-design.md` — proposed database structure.
+- `use-cases.md` — user workflows and acceptance criteria.
 
+## Getting Started
+
+Install Node.js, then run:
+
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+Open the local URL shown in the terminal.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Planned Features
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Customer registration and login
+- Service listings
+- Barber availability management
+- Appointment booking and cancellation
+- Administrative management
 
-```
+## Author
+
+Rabia Rehman  
+BSc Computer Science, Royal Holloway, University of London
+
+**Status:** In development.
