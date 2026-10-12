@@ -1,58 +1,20 @@
-# Barber Shop SaaS
+## Current Development Status
 
-An independent software engineering project to develop a web-based barber shop booking and appointment management platform.
+The project currently includes a responsive landing page and an interactive frontend booking prototype built with React and TypeScript.
 
-## Objectives
+### Implemented
+- Responsive landing page and service cards.
+- Service selection with price and duration display.
+- Barber selection.
+- Sample date and time selection.
+- Booking review and demonstration confirmation.
+- Visual feedback for selected options.
 
-- Design a clear, accessible user interface.
-- Plan customer appointment booking and management.
-- Implement authentication and role-based access control.
-- Design a relational database.
-- Apply modular design, testing and version control.
+### Planned
+- User registration and authentication.
+- Supabase database integration.
+- Persistent appointment storage.
+- Real barber availability checks and prevention of conflicting bookings.
+- Automated tests.
 
-## Technology Stack
-
-- React
-- TypeScript
-- Vite
-- ESLint
-- Git and GitHub
-- Supabase (planned)
-
-## Current Status
-
-The project is in its initial setup and planning stage. The React and TypeScript starter application has been created. Booking functionality, authentication and database integration are planned but not yet implemented.
-
-## Documentation
-
-Project documentation is stored in `docs/`:
-
-- `architecture.md` — system architecture.
-- `database-design.md` — proposed database structure.
-- `use-cases.md` — user workflows and acceptance criteria.
-
-## Getting Started
-
-Install Node.js, then run:
-
-```bash
-npm install
-npm run dev
-```
-
-Open the local URL shown in the terminal.
-
-## Planned Features
-
-- Customer registration and login
-- Service listings
-- Barber availability management
-- Appointment booking and cancellation
-- Administrative management
-
-## Author
-
-Rabia Rehman  
-BSc Computer Science, Royal Holloway, University of London
-
-**Status:** In development.
+**Important:** The current booking journey uses sample data. Confirmations are demonstrations only; bookings are not saved to a database.
